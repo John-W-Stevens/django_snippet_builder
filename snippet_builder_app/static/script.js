@@ -213,10 +213,21 @@ $(document).ready(function(){
 
 		length = editor.session.getLength()
 		lines = editor.session.getLines(0,length-1)
+		// console.log(lines)
 
 		code_lines = [];
 		for (var i=0; i<lines.length; i++){
-			code_lines.push('       '+'"'+lines[i]+'"'+',\n')
+
+			// formats code lines to accept the use of quotation marks (which is a problem for vs code formatiing)
+			starting_line = lines[i]
+			formatted_line = ""
+			for (var j=0; j<starting_line.length; j++){
+				if (starting_line[j] == '"'){
+					formatted_line += "\\"
+				}
+				formatted_line += starting_line[j]
+			}
+			code_lines.push('       '+'"'+formatted_line+'"'+',\n')
 		}
 
 		snippet = '{\n   '+'"'+description+'"'+': {'+'\n'+
