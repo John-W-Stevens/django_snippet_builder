@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+
+    {% load static %}
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
+
+    <!-- Custom CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+    <title>About Snippet Builder</title>
+
+    <style>
+        .jumbotron {
+          margin-top: 20px;
+        }
+      </style>
+
+  </head>
+  
+  <body>
+    <div class="container">
+ <!-- Jumbotron -->
+        <div class="row"></div>
+
+
+        <div class="jumbotron">
+            <h1 class="display-4">Snippet Builder</h1>
+            <p class="lead">This compact full-stack application was built with the Django 2.2 web development framework. 
+                The following technologies were used in the development of this app: Python3, Django 2.2, HTML, CSS (Bootstrap 4), and JavaScript (jQuery).
+                This app was deployed on a Amazon Web Services (AWS) cloud server
+            using NGINX and Gunicorn. </p>
+            <hr class="my-4">
+            <h4>How it works:</h4>
+            <p>Select your code editor and programming language, enter a description and tab trigger, write (or paste) your snippet code in the <a href="https://ace.c9.io/" target="_blank" rel="noopener noreferrer">Ace</a> editor, click copy to clipboard, open a new snippet file in your code editor, replace the entire content of that file with your snippet, save it, and start using your snippet.</p>
+            <h4>Why I built it:</h4>
+            <p>I built this app because both the text editors I use (Sublime Text and VS Code) don't have GUI's for creating snippets and I didn't find their respective
+                snippet templates to be particularly intuitive. I wanted an easy way to create snippets quickly.
+            </p>
+
+            <p><a class="btn btn-lg btn-primary" href="/snippet_builder" role="button">Check it out</a></p>
+        </div>
+
+        <!-- Content -->
+        <div class="row">
+            <div class="col-4">
+            <h3>Easy</h3>
+            <p>Simple and intutive, this app was designed for the person who just wants to create a code snippet without having to parse through
+                a confusing template.
+            </p>
+            </div>
+            <div class="col-4">
+            <h3>Efficient</h3>
+            <p>Making snippets should be easy and quick. In fact, that's why most full blown IDE's have a GUI for doing just that thing.
+            </p>
+            </div>
+            <div class="col-4">
+            <h3>Effective</h3>
+            <p>The use of an embedded code editor allows you to write snippets from scratch while enjoying some of the standard features avalable in your favorite code editor.</p>
+            </div>
+        </div>
+    </div>
+  <!-- JavaScript -->
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+  <!-- Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+  <!-- bootstrap.js-->
+  <script type="text/javascript" src="{% static 'bootstrap.js' %}"></script>
+
+
+</body>
+
+</html>
+
