@@ -394,17 +394,12 @@ $(document).ready(function(){
 	}
 	
 	$("#error_message_button").on("click",function(e){
-		e.preventDefault()
-		if ($("#email").val() == ""){
+		e.preventDefault();
+		if (validate_email_format($("#email").val()) || $("#email").val() == ""){
 			$("#error_message_form").submit()
 		}
 		else {
-			if (validate_email_format($("#email").val())){
-				$("#error_message_form").submit()
-			}
-			else {
-				$("#email_label").html('                              <label>Email</label>&nbsp&nbsp<small style="color:red;">Invalid email address</small>')
-			}
+			$("#email_label").html('                              <label>Email</label>&nbsp&nbsp<small style="color:red;">Invalid email address</small>')
 		}
 	})
 

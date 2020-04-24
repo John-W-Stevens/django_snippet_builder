@@ -6,6 +6,8 @@ def snippet_builder(request):
     # POST request
     if request.POST:
         # process error message
+        if request.POST["content"] == "":
+            return redirect("/snippet_builder")
         error_message = models.ErrorMessage.objects.create(content=request.POST["content"])
         if request.POST["name"]:
             error_message.author = request.POST["name"]
